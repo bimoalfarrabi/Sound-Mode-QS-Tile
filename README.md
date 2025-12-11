@@ -28,11 +28,11 @@ This repository contains two main branches, each offering a different approach t
 
 For the `main` branch (Official Silent Mode):
 
-1.  **Download APK:** Download the pre-built debug APK from the [Releases](https://github.com/bimoalfarrabi/Sound-Mode-QS-Tile/releases) section.
+1.  **Download APK:** Download the desired APK (e.g., `app-debug.apk` or `app-release.apk`) from the [Releases](https://github.com/bimoalfarrabi/Sound-Mode-QS-Tile/releases) section to your device.
 2.  **Install on Device:**
-    ```bash
-    adb install -r path/to/downloaded/app-debug.apk
-    ```
+    *   Locate the downloaded `.apk` file using a file manager on your device.
+    *   Tap the `.apk` file to install it. You may need to grant permission to your file manager to install apps from unknown sources.
+    *   *(Optional, for developers:)* If you prefer `adb`, use `adb install -r path/to/downloaded/app-debug.apk`.
 
 For the `true-silent-implementation` branch (Volume 0 Method) or to build from source:
 
@@ -50,10 +50,11 @@ For the `true-silent-implementation` branch (Volume 0 Method) or to build from s
     ./gradlew assembleDebug
     ```
     The APK will be located at `app/build/outputs/apk/debug/app-debug.apk`.
-4.  **Install on Device:**
+4.  **Install on Device (via adb, or copy to device and install):**
     ```bash
     adb install -r app/build/outputs/apk/debug/app-debug.apk
     ```
+    Alternatively, copy the generated `app-debug.apk` to your device and install it directly via a file manager.
 
 ## Usage
 
